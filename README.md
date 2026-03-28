@@ -8,13 +8,21 @@ This repository contains a collection of MATLAB utility functions developed duri
 Provides a standard pipeline for processing raw EMG signals into linear envelopes.
 - **Workflow**: 4th-order Butterworth bandpass filter (20–250 Hz) → Full-wave rectification → 4th-order Butterworth low-pass filter for smoothing.
 - **Usage**: 
+% EMG preprocessing
+% 20 - 250 Hz bandpass filter 
+% rectification
+% low pass filter (3rd argument)
+% raw_emg     : raw EMG data (voltage)
+% fs          : sampling frequency [Hz]
+% lowpass_hz  : cutoff frequency for the final smoothing [Hz]
+
 
 ### 2. Rigid-Body Rotation Matrix Calculation (`rotation_matrix.m`)
 Computes time-series rotation matrices mapping static reference markers to dynamic marker sets using Singular Value Decomposition (SVD).
-- **Robustness (Handling Reflection)**: Includes a specific check for the determinant of the rotation matrix. If a reflection (left-handed system) is detected due to measurement noise or skin artifacts, the function automatically corrects it to a proper right-handed rotation matrix and logs a warning to the console:
+- **Robustness (Handling Reflection)**: If a reflection (left-handed system) is detected, the function corrects it to a right-handed rotation matrix and logs a warning to the console:
   `Warning: Reflection detected and corrected at frame [t]`
-- **Traceability**: This approach ensures the continuity of the data pipeline while maintaining high standards for data quality assessment.
-
+- **Usage**
+- 
 ---
 
 ## Technical Note & Work in Progress
