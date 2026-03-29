@@ -5,11 +5,12 @@ function all_data = import_biodex_data(base_path, subj_list)
 % applying any joint-specific normalization or offset corrections.
 %
 % Inputs:
-%   base_path - String path to the 'exported_data' folder.
-%   subj_list - Vector of subject IDs to process.
+% base_path: directory containing subject folders (e.g., '001/hip/')
+% subj_list: array of subject IDs e.g., [8, 12]
 %
 % Returns:
 %   all_data  - Struct containing parsed data organized by subject and condition.
+
 
     all_data = struct();
     jnt_names = {'hip', 'knee', 'ankle'};
