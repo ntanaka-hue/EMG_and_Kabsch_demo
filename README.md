@@ -44,6 +44,30 @@ Warning: Reflection detected and corrected at frame [t]
 % R_all : 3x3xT rotation matrices mapping STATIC → DYNAMIC for each frame
 ```
 
----
+
+### 3. Biodex Data Importer (import_biodex_data.m)
+
+A parser for ASCII files exported from the Biodex System 3.
+Automated Data Extraction: Parses header info (Subject ID, Joint, Mode) and organizes time-series data into a structured MATLAB format.
+Unit Conversion: Automatically scales raw values and converts Torque from lb-ft to Newton-Meters (Nm).
+
+- **Workflow**:
+  Data import → Unit conversion, Value scaling → Export (MATLAB format).
+
+
+Format Support: Compatible with both Isokinetic (ISOK) and Isometric (ISOM) test exports.
+
+Multi-Subject Processing: Designed to batch-process nested directory structures.
+
+Expected Folder Structure
+
 
 ## Technical Note & Work in Progress
+
+The functions shared here are a subset of a larger biomechanics data pipeline.
+- Private Repository: The core musculoskeletal modeling engine and primary research datasets are currently maintained in a private repository due to ongoing PhD research and data privacy requirements.
+- Under Development: Additional tools for force estimation and automated scaling are currently undergoing validation and code refactoring. They will be integrated into this collection once they meet my standards for production-quality implementation and documentation.
+  
+NTanaka
+
+---
