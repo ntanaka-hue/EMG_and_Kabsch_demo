@@ -62,10 +62,9 @@ Unit Conversion: Automatically scales raw values and converts Torque from lb-ft 
 %
 % Returns:
 %   all_data  - Struct containing parsed data organized by subject and condition.
+```
 
-
-
-## Technical Note and Work in Progress
+# Technical Note and Work in Progress
 
 The functions shared here are a subset of a larger biomechanics data pipeline.
 - Private Repository: The core musculoskeletal modeling engine and primary research datasets are currently maintained in a private repository due to ongoing PhD research and data privacy requirements.
