@@ -54,12 +54,15 @@ Unit Conversion: Automatically scales raw values and converts Torque from lb-ft 
 - **Workflow**:
   Data import → Unit conversion, Value scaling → Export (MATLAB format).
 
+-**Usage**
+```matlab
+% Inputs:
+%   base_path - String path to the 'exported_data' folder.
+%   subj_list - Vector of subject IDs to process.
+%
+% Returns:
+%   all_data  - Struct containing parsed data organized by subject and condition.
 
-Format Support: Compatible with both Isokinetic (ISOK) and Isometric (ISOM) test exports.
-
-Multi-Subject Processing: Designed to batch-process nested directory structures.
-
-Expected Folder Structure
 
 
 ## Technical Note & Work in Progress
