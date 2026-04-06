@@ -38,6 +38,7 @@ function R_all = svd_rigid_rotation_timeseries(static_markers, dynamic_markers)
         if det(R) < 0
             V(:,3) = -V(:,3);
             R = V * U';
+            warning('Frame %d: Reflection detected (det(R) < 0). Check marker labels.', t);
         end
 
         % ---- store ----
